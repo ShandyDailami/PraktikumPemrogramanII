@@ -17,19 +17,16 @@ public class Tabel extends Application {
     @Override
     public void start(Stage primaryStage) {
         TableView tabel = new TableView();
-        TableColumn<Mahasiswa, String>kolom1 = new TableColumn<>("ID");
+        TableColumn<Mahasiswa, String>kolom1 = new TableColumn<>("NIM");
         TableColumn<Mahasiswa, String>kolom2 = new TableColumn<>("Nama");
-        TableColumn<Mahasiswa, String>kolom3 = new TableColumn<>("NIM");
-        kolom1.setCellValueFactory(new PropertyValueFactory<>("id"));
+        kolom1.setCellValueFactory(new PropertyValueFactory<>("nim"));
         kolom2.setCellValueFactory(new PropertyValueFactory<>("nama"));
-        kolom3.setCellValueFactory(new PropertyValueFactory<>("nim"));
         tabel.getColumns().add(kolom1);
         tabel.getColumns().add(kolom2);
-        tabel.getColumns().add(kolom3);
         tabel.getItems().add(new Mahasiswa(1, "123456", "Gandul"));
         tabel.getItems().add(new Mahasiswa(2, "234567", "Agus"));
         tabel.getItems().add(new Mahasiswa(3, "345678", "Udin"));
-        tabel.getItems().add(new Mahasiswa(4, "456789", "Abdul"));
+        tabel.getItems().add(new Mahasiswa(4, "456789", "Tiara"));
         tabel.getItems().add(new Mahasiswa(5, "567890", "Shandy"));
         tabel.getItems().add(new Mahasiswa(6, "678901", "Kurama"));
         tabel.getItems().add(new Mahasiswa(7, "789012", "Syam"));
